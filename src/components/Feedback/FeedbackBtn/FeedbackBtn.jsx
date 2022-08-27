@@ -17,9 +17,13 @@ const FeedbackBtn = ({ options, onLeaveFeedback }) => {
   return <ul className={s.list}>{item}</ul>;
 };
 
-export default FeedbackBtn
+export default FeedbackBtn;
 
 FeedbackBtn.propTypes = {
-  options: PropTypes.arrayOf(PropTypes.string.isRequired),
+  options: PropTypes.shape({
+    good: PropTypes.number.isRequired,
+    neutral: PropTypes.number.isRequired,
+    bad: PropTypes.number.isRequired,
+  }),
   onLeaveFeedback: PropTypes.func.isRequired,
 };
