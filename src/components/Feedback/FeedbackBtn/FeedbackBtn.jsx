@@ -20,10 +20,6 @@ const FeedbackBtn = ({ options, onLeaveFeedback }) => {
 export default FeedbackBtn;
 
 FeedbackBtn.propTypes = {
-  options: PropTypes.shape({
-    good: PropTypes.number.isRequired,
-    neutral: PropTypes.number.isRequired,
-    bad: PropTypes.number.isRequired,
-  }),
+  options: PropTypes.arrayOf(PropTypes.string),
   onLeaveFeedback: PropTypes.func.isRequired,
 };
